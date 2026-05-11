@@ -137,15 +137,6 @@ const DoctorDashboard = () => {
     },
   ];
 
-  function generateDiagnosis() {}
-
-  // Function to handle button click
-  const handleGenerateDiagnosis = (diagnosis: any) => {
-    alert(
-      `Generating diagnosis for ${diagnosis.patientName} (${diagnosis.disease})`
-    );
-    // Add your custom logic here
-  };
   const router = useRouter();
   useEffect(() => {
     if (!localStorage.getItem("doctor")) {
@@ -154,11 +145,16 @@ const DoctorDashboard = () => {
       return;
     }
 
-    const doctor = JSON.parse(localStorage.getItem("doctor") || "");
-    console.log(doctor);
-    setDoc(doctor);
+    const raw = localStorage.getItem("doctor");
+    if (raw) {
+      try {
+        setDoc(JSON.parse(raw));
+      } catch {
+        /* keep default */
+      }
+    }
     setLoading(false);
-  }, []);
+  }, [router]);
 
   if (loading) return <Loading />;
 

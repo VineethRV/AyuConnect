@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+.next/
+out/
+.turbo/
+
+# Environments
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+.claude/
+*.swp
+
+# Build artefacts & weights
+*.bin
+*.safetensors
+*.gguf
+data/weights/
+*.tsbuildinfo
+next-env.d.ts
+
+# Notebook scratch
+.ipynb_checkpoints/
+
+# Local dev
+backend/.env

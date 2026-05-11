@@ -1,0 +1,9 @@
+AyuConnect
+Copyright 2026 The AyuConnect Authors
+
+This product includes software developed at the RVCE GenAI Hackathon (the
+original AyuConnect prototype) and substantially reworked for the Gemma 4 Good
+Hackathon (May 2026) to use Google DeepMind's Gemma 4 family of open
+multimodal models. Gemma 4 is licensed by Google under the Apache License,
+Version 2.0; the model weights are not redistributed in this repository — they
+are pulled at runtime from Hugging Face or Ollama.

@@ -36,20 +36,21 @@ const PatientInfoComponent: React.FC = () => {
   const [patientInfo, setPatientInfo] = useState<PatientInfo>(patientInfoMock);
   const [loading, setLoading] = useState(true);
 
-  useEffect(()=>{
-    const patient = JSON.parse(localStorage.getItem('patient') || "");
-    setPatientInfo(patient)
-  },[])
-
-  const fetchPatientInfo = () => {
-    // api call
+  useEffect(() => {
+    const raw = localStorage.getItem("patient");
+    if (raw) {
+      try {
+        setPatientInfo(JSON.parse(raw));
+      } catch {
+        /* keep mock */
+      }
+    }
     setLoading(false);
-  };
+  }, []);
 
-  const [medicines, setMedicines] = useState("");
-  const [list, setList] = useState<string[]>([]);
+  const list: string[] = [];
 
-  if (loading) <Loading />;
+  if (loading) return <Loading />;
 
   return (
     <div
@@ -66,7 +67,7 @@ const PatientInfoComponent: React.FC = () => {
           <h1 className="text-2xl font-bold text-gray-800">
             Patient Information
           </h1>
-          <p className="text-gray-600">Overview of patient's medical data</p>
+          <p className="text-gray-600">Overview of the patient&apos;s medical data</p>
         </div>
 
         {/* Patient Details */}

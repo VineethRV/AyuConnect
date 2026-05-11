@@ -1,0 +1,103 @@
+{
+  "diseases": [
+    {
+      "name": "Type 2 Diabetes Mellitus",
+      "icd10": "E11",
+      "summary": "Chronic condition affecting how the body metabolizes glucose; characterized by insulin resistance and relative insulin deficiency.",
+      "common_symptoms": ["polyuria", "polydipsia", "unexplained weight loss", "fatigue", "blurred vision", "slow-healing wounds"],
+      "red_flags": ["altered mental status", "fruity breath odor", "rapid breathing", "vomiting"],
+      "first_line_treatments": ["lifestyle modification", "metformin"],
+      "specialty": "Endocrinology"
+    },
+    {
+      "name": "Acute Myocardial Infarction",
+      "icd10": "I21",
+      "summary": "Heart attack — blockage of blood flow to the heart muscle causing tissue death.",
+      "common_symptoms": ["central crushing chest pain", "pain radiating to left arm or jaw", "diaphoresis", "dyspnea", "nausea"],
+      "red_flags": ["chest pain > 20 minutes", "syncope", "pain with sweating in patient > 40"],
+      "first_line_treatments": ["emergency referral", "aspirin 300mg chewed if no contraindication"],
+      "specialty": "Cardiology / Emergency"
+    },
+    {
+      "name": "Community-Acquired Pneumonia",
+      "icd10": "J18",
+      "summary": "Lower respiratory tract infection acquired outside of hospital.",
+      "common_symptoms": ["productive cough", "fever", "pleuritic chest pain", "dyspnea", "fatigue"],
+      "red_flags": ["respiratory rate > 30", "SpO2 < 92%", "confusion", "BP < 90/60"],
+      "first_line_treatments": ["amoxicillin", "doxycycline (penicillin-allergic)"],
+      "specialty": "Pulmonology / General Medicine"
+    },
+    {
+      "name": "Migraine",
+      "icd10": "G43",
+      "summary": "Recurrent moderate-to-severe headache, typically unilateral, often pulsatile.",
+      "common_symptoms": ["unilateral throbbing headache", "photophobia", "phonophobia", "nausea", "aura"],
+      "red_flags": ["thunderclap onset", "focal neurology", "fever + neck stiffness", "first severe headache > 50y"],
+      "first_line_treatments": ["NSAIDs", "triptans"],
+      "specialty": "Neurology"
+    },
+    {
+      "name": "Asthma Exacerbation",
+      "icd10": "J45.9",
+      "summary": "Acute worsening of airway inflammation and bronchoconstriction in a known/suspected asthmatic.",
+      "common_symptoms": ["wheeze", "dyspnea", "chest tightness", "dry cough"],
+      "red_flags": ["unable to speak in full sentences", "silent chest", "SpO2 < 92%", "cyanosis"],
+      "first_line_treatments": ["salbutamol inhaler", "oral steroids", "oxygen"],
+      "specialty": "Pulmonology"
+    },
+    {
+      "name": "Iron-Deficiency Anaemia",
+      "icd10": "D50",
+      "summary": "Most common type of anaemia — insufficient iron leads to reduced haemoglobin synthesis.",
+      "common_symptoms": ["fatigue", "pallor", "dyspnea on exertion", "pica", "brittle nails"],
+      "red_flags": ["postural syncope", "Hb < 7 g/dL", "rectal bleeding"],
+      "first_line_treatments": ["oral ferrous sulphate", "investigate underlying GI loss"],
+      "specialty": "Haematology / General Medicine"
+    },
+    {
+      "name": "Hypertension (Essential)",
+      "icd10": "I10",
+      "summary": "Persistently elevated systemic arterial blood pressure with no identified secondary cause.",
+      "common_symptoms": ["asymptomatic", "occipital morning headache", "epistaxis (uncommon)"],
+      "red_flags": ["BP > 180/120 with end-organ symptoms", "chest pain", "neurological deficits"],
+      "first_line_treatments": ["lifestyle", "ACE inhibitor or ARB", "thiazide diuretic"],
+      "specialty": "Cardiology / General Medicine"
+    },
+    {
+      "name": "Gastroenteritis (Acute)",
+      "icd10": "A09",
+      "summary": "Inflammation of stomach and intestines, usually viral, self-limiting in adults.",
+      "common_symptoms": ["watery diarrhea", "vomiting", "abdominal cramps", "low-grade fever"],
+      "red_flags": ["bloody stools", "signs of severe dehydration", "high fever", "no urine > 8h"],
+      "first_line_treatments": ["oral rehydration salts", "anti-emetic if needed"],
+      "specialty": "General Medicine"
+    },
+    {
+      "name": "Atopic Dermatitis",
+      "icd10": "L20",
+      "summary": "Chronic relapsing inflammatory skin condition with itchy, erythematous patches.",
+      "common_symptoms": ["pruritus", "erythematous papules/plaques", "lichenification", "dry skin"],
+      "red_flags": ["fever + spreading vesicles (eczema herpeticum)", "secondary impetigo with systemic features"],
+      "first_line_treatments": ["emollients", "topical corticosteroids", "trigger avoidance"],
+      "specialty": "Dermatology"
+    },
+    {
+      "name": "Generalised Anxiety Disorder",
+      "icd10": "F41.1",
+      "summary": "Excessive worry on most days for at least 6 months, causing distress or functional impairment.",
+      "common_symptoms": ["worry", "restlessness", "fatigue", "poor sleep", "muscle tension", "irritability"],
+      "red_flags": ["suicidal ideation", "self-harm", "psychotic features"],
+      "first_line_treatments": ["CBT", "SSRI (e.g., sertraline)"],
+      "specialty": "Psychiatry"
+    }
+  ],
+  "interactions": [
+    {"pair": ["aspirin", "warfarin"], "severity": "major", "summary": "Markedly increased bleeding risk; avoid combination or monitor INR very closely."},
+    {"pair": ["metformin", "iodinated contrast"], "severity": "moderate", "summary": "Risk of lactic acidosis with renal impairment; hold metformin around contrast administration."},
+    {"pair": ["sertraline", "tramadol"], "severity": "major", "summary": "Serotonin syndrome risk; avoid combination."},
+    {"pair": ["amoxicillin", "methotrexate"], "severity": "moderate", "summary": "Penicillins can decrease renal clearance of methotrexate, raising toxicity."},
+    {"pair": ["clarithromycin", "simvastatin"], "severity": "major", "summary": "CYP3A4 inhibition raises statin levels — rhabdomyolysis risk. Switch statin or hold."},
+    {"pair": ["ibuprofen", "lisinopril"], "severity": "moderate", "summary": "NSAIDs reduce antihypertensive effect and raise AKI risk in the elderly."},
+    {"pair": ["salbutamol", "propranolol"], "severity": "major", "summary": "Non-selective beta-blockers antagonise bronchodilation; avoid in asthmatics."}
+  ]
+}

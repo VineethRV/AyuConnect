@@ -10,8 +10,8 @@ const Page = () => {
   const [spec, setSpec] = useState("");
   const router = useRouter();
 
-  function regDoc(e: any) {
-    e.preventDefault(); // Prevent default form submission
+  function regDoc(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     if (!name || !email || !phone || !spec) {
       toast.error("Please fill in all fields!"); // Validation feedback
       return;
